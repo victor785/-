@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时股票数据分析仪表盘</title>
+    <meta name="description" content="实时股票数据分析仪表盘，展示多只股票走势、涨跌分析和市场概览">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <rect width="28" height="28" rx="8" fill="url(#logo-grad)"/>
+                    <path d="M7 18L11 12L15 15L21 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                </svg>
+                <h1>StockPulse</h1>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="market-time">
+                <span class="live-dot"></span>
+                <span id="market-time">实时行情</span>
+            </div>
+            <div class="clock" id="clock"></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- 市场指数概览 -->
+        <section class="market-overview">
+            <h2 class="section-title">市场指数</h2>
+            <div class="index-cards" id="index-cards"></div>
+        </section>
+
+        <!-- 主内容区 -->
+        <div class="content-grid">
+            <!-- 左侧：股票列表 -->
+            <section class="stock-list-section">
+                <div class="section-header">
+                    <h2 class="section-title">个股行情</h2>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">全部</button>
+                        <button class="filter-tab" data-filter="up">涨</button>
+                        <button class="filter-tab" data-filter="down">跌</button>
+                    </div>
+                </div>
+                <div class="stock-list" id="stock-list"></div>
+            </section>
+
+            <!-- 右侧：图表和详情 -->
+            <section class="chart-section">
+                <div class="chart-header">
+                    <div class="chart-stock-info" id="chart-stock-info">
+                        <h2 class="chart-stock-name" id="chart-stock-name">贵州茅台</h2>
+                        <span class="chart-stock-code" id="chart-stock-code">600519</span>
+                    </div>
+                    <div class="chart-stock-price" id="chart-stock-price">
+                        <span class="price-main" id="price-main">--</span>
+                        <span class="price-change" id="price-change">--</span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="price-chart"></canvas>
+                </div>
+                <!-- 详情面板 -->
+                <div class="detail-grid" id="detail-grid"></div>
+            </section>
+        </div>
+
+        <!-- 成交量图表 -->
+        <section class="volume-section">
+            <h2 class="section-title">成交量</h2>
+            <div class="volume-chart-container">
+                <canvas id="volume-chart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
