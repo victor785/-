@@ -1,5 +1,4 @@
-# -
-本地股票模拟
+# 本地股票模拟
 [implementation_plan.md.md](https://github.com/user-attachments/files/25440310/implementation_plan.md.md)
 # 实时股票数据分析网页
 
