@@ -1,2 +1,74 @@
 # -
 本地股票模拟
+[implementation_plan.md.md](https://github.com/user-attachments/files/25440310/implementation_plan.md.md)
+# 实时股票数据分析网页
+
+创建一个现代风格的股票数据分析仪表盘，展示多只股票的实时价格走势、涨跌分析和市场概览。使用模拟数据生成真实感的股票行情。
+
+## 技术方案
+
+| 项目 | 选择 | 说明 |
+|------|------|------|
+| 结构 | HTML5 | 语义化标签 |
+| 样式 | Vanilla CSS | 暗色主题 + 玻璃拟态 |
+| 逻辑 | Vanilla JS | 模拟实时数据 |
+| 图表 | Chart.js (CDN) | 实时折线图 |
+| 字体 | Inter (Google Fonts) | 现代感 |
+
+## 功能设计
+
+1. **市场概览** — 大盘指数卡片（上证、深证、创业板）
+2. **股票列表** — 多只个股卡片，显示价格、涨跌幅、成交量
+3. **实时走势图** — 点击股票后显示分时走势图（Chart.js 动态更新）
+4. **数据面板** — 开盘价、最高、最低、换手率等详情
+5. **自动刷新** — 每 2 秒模拟更新行情数据
+
+## Proposed Changes
+
+### 网页文件
+
+#### [NEW] [index.html](file:///d:/idm/stock-dashboard/index.html)
+页面主体结构：顶部导航栏、市场概览区、股票列表区、走势图详情区。引入 Chart.js CDN 和 Google Fonts。
+
+#### [NEW] [index.css](file:///d:/idm/stock-dashboard/index.css)
+完整样式系统：CSS 变量定义颜色体系、暗色主题、玻璃拟态卡片、动画效果、响应式布局。
+
+#### [NEW] [app.js](file:///d:/idm/stock-dashboard/app.js)
+核心逻辑：股票数据模型、随机行情模拟引擎、Chart.js 图表初始化与实时更新、DOM 交互逻辑。
+
+## Verification Plan
+
+### 浏览器验证
+1. 使用浏览器工具打开 `d:/idm/stock-dashboard/index.html`
+2. 验证页面渲染正常，暗色主题生效
+3. 确认股票卡片显示价格和涨跌幅
+4. 确认图表实时更新
+5. 点击不同股票卡片验证图表切换
+[Uploading walkthrough.md.resolved…]()#
+实时股票数据分析仪表盘 — 完成总结
+
+## 创建的文件
+
+| 文件 | 说明 |
+|------|------|
+| [index.html](file:///d:/idm/stock-dashboard/index.html) | 页面结构 |
+| [index.css](file:///d:/idm/stock-dashboard/index.css) | 暗色主题样式 |
+| [app.js](file:///d:/idm/stock-dashboard/app.js) | 数据模拟与交互逻辑 |
+
+## 功能特性
+
+- **市场指数** — 上证、深证、创业板三大指数实时显示
+- **10只个股** — 贵州茅台、宁德时代、比亚迪等A股热门个股
+- **实时走势图** — Chart.js 分时线图，每2秒自动更新
+- **成交量图表** — 红绿柱状图显示成交量变化
+- **涨跌筛选** — 一键筛选涨/跌股票
+- **详情面板** — 开盘、最高、最低、换手率等8项指标
+- **暗色主题** — 玻璃拟态卡片 + 微动画
+- **响应式** — 适配桌面和移动端
+
+## 使用方式
+
+双击 [d:\idm\stock-dashboard\index.html](file:///d:/idm/stock-dashboard/index.html) 即可在浏览器中打开。页面会自动模拟实时行情更新，无需服务器。
+
+
+
