@@ -27,19 +27,19 @@
 
 ### 网页文件
 
-#### [NEW] [index.html](file:///d:/idm/stock-dashboard/index.html)
+#### [NEW] [index.html](file:index.html)
 页面主体结构：顶部导航栏、市场概览区、股票列表区、走势图详情区。引入 Chart.js CDN 和 Google Fonts。
 
-#### [NEW] [index.css](file:///d:/idm/stock-dashboard/index.css)
+#### [NEW] [index.css](file:index.css)
 完整样式系统：CSS 变量定义颜色体系、暗色主题、玻璃拟态卡片、动画效果、响应式布局。
 
-#### [NEW] [app.js](file:///d:/idm/stock-dashboard/app.js)
+#### [NEW] [app.js](file:app.js)
 核心逻辑：股票数据模型、随机行情模拟引擎、Chart.js 图表初始化与实时更新、DOM 交互逻辑。
 
 ## Verification Plan
 
 ### 浏览器验证
-1. 使用浏览器工具打开 `d:/idm/stock-dashboard/index.html`
+1. 使用浏览器工具打开 `index.html`
 2. 验证页面渲染正常，暗色主题生效
 3. 确认股票卡片显示价格和涨跌幅
 4. 确认图表实时更新
@@ -51,9 +51,9 @@
 
 | 文件 | 说明 |
 |------|------|
-| [index.html](file:///d:/idm/stock-dashboard/index.html) | 页面结构 |
-| [index.css](file:///d:/idm/stock-dashboard/index.css) | 暗色主题样式 |
-| [app.js](file:///d:/idm/stock-dashboard/app.js) | 数据模拟与交互逻辑 |
+| [index.html](file:index.html) | 页面结构 |
+| [index.css](file:index.css) | 暗色主题样式 |
+| [app.js](file:app.js) | 数据模拟与交互逻辑 |
 
 ## 功能特性
 
@@ -68,7 +68,7 @@
 
 ## 使用方式
 
-双击 [d:\idm\stock-dashboard\index.html](file:///d:/idm/stock-dashboard/index.html) 即可在浏览器中打开。页面会自动模拟实时行情更新，无需服务器。
+双击 [index.html](file:index.html) 即可在浏览器中打开。页面会自动模拟实时行情更新，无需服务器。
 
 
 
